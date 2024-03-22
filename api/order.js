@@ -3,7 +3,7 @@ import request from '@/utils/requestUtil'
 export function generateConfirmOrder(data) {
 	return request({
 		method: 'POST',
-		url: '/order/generateConfirmOrder',
+		url: '/portal/order/generateConfirmOrder',
 		data: data
 	})
 }
@@ -11,7 +11,7 @@ export function generateConfirmOrder(data) {
 export function generateOrder(data) {
 	return request({
 		method: 'POST',
-		url: '/order/generateOrder',
+		url: '/portal/order/generateOrder',
 		data: data
 	})
 }
@@ -19,7 +19,7 @@ export function generateOrder(data) {
 export function fetchOrderList(params) {
 	return request({
 		method: 'GET',
-		url: '/order/list',
+		url: '/portal/order/list',
 		params: params
 	})
 }
@@ -27,7 +27,7 @@ export function fetchOrderList(params) {
 export function payOrderSuccess(data) {
 	return request({
 		method: 'POST',
-		url: '/order/paySuccess',
+		url: '/portal/order/paySuccess',
 		header: {
 			'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
 		},
@@ -38,14 +38,14 @@ export function payOrderSuccess(data) {
 export function fetchOrderDetail(orderId) {
 	return request({
 		method: 'GET',
-		url: `/order/detail/${orderId}`
+		url: `/portal/order/detail/${orderId}`
 	})
 }
 
 export function cancelUserOrder(data) {
 	return request({
 		method: 'POST',
-		url: '/order/cancelUserOrder',
+		url: '/portal/order/cancelUserOrder',
 		header: {
 			'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
 		},
@@ -56,7 +56,7 @@ export function cancelUserOrder(data) {
 export function confirmReceiveOrder(data) {
 	return request({
 		method: 'POST',
-		url: '/order/confirmReceiveOrder',
+		url: '/portal/order/confirmReceiveOrder',
 		header: {
 			'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
 		},
@@ -67,7 +67,7 @@ export function confirmReceiveOrder(data) {
 export function deleteUserOrder(data) {
 	return request({
 		method: 'POST',
-		url: '/order/deleteOrder',
+		url: '/portal/order/deleteOrder',
 		header: {
 			'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
 		},

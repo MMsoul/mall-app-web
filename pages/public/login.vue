@@ -21,7 +21,7 @@
 				</view>
 			</view>
 			<button class="confirm-btn" @click="toLogin" :disabled="logining">登录</button>
-			<button class="confirm-btn2" @click="toRegist" >获取体验账号</button>
+			<button class="confirm-btn2" @click="toRegist" >去注册</button>
 			<view class="forget-section" @click="toRegist">
 				忘记密码?
 			</view>
@@ -72,7 +72,7 @@
 					uni.setStorageSync('password',this.password);
 					memberInfo().then(response=>{
 						this.login(response.data);
-						uni.navigateBack();
+						uni.switchTab({url:'/pages/index/index'});
 					});
 				}).catch(() => {
 					this.logining = false;
