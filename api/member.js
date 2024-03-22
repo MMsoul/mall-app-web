@@ -3,7 +3,7 @@ import request from '@/utils/requestUtil'
 export function memberLogin(data) {
 	return request({
 		method: 'POST',
-		url: '/sso/login',
+		url: '/member/login',
 		header: {
 			'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
 		},
@@ -14,6 +14,6 @@ export function memberLogin(data) {
 export function memberInfo() {
 	return request({
 		method: 'GET',
-		url: '/sso/info'
+		url: '/member/info'
 	})
 }
